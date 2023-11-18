@@ -1,7 +1,7 @@
 <img src="./timeAgo.js.png"/>
 
 # timeAgo.js
-timeAgo.js is a nano library (less than 2.22 KB) used to format datetime in 5 different languages. eg: '3 days ago'.
+timeAgo.js is a nano library used to format datetime in 5 different languages. eg: '3 days ago'.
 
 | Browser | Version | Support |
 |---------|---------|---------|
@@ -73,19 +73,23 @@ nuha
 2 ساڵ پێش ئێستا
 ```
 
-## Usage
+# Usage
 
- - install/import `<script>` in `<head>`
+Install/Import `<script>` before `</head>`
 
 ```html
 <script src="./timeAgo.js"></script>
 ```
 
-- add `<script>` before `</body>`
+```html
+<script src="https://cdn.jsdelivr.net/gh/Rawandev-top/timeAgo.js@main/timeAgo.js"></script>
+```
+
+Then add `<script>` before `</body>`
 
 ```html
 <script>
-  // Load TimeAgo.js
+  // Load timeAgo.js
   const timeago = new TimeAgo("en");
 
   // Update timestamps
@@ -96,7 +100,7 @@ nuha
 </script>
 ```
 
-- chnage `TimeAgo("en")` to chnage the language
+Change `TimeAgo("en")` to the language that you want
 
 - language codes:
   -  `en` for English
@@ -108,13 +112,13 @@ nuha
 # How to use?
 
 ```html
-<div class="timestamp" date-time="2023-11-18 23:03:12"></div>
+<div class="timestamp" date-time="2023-11-18 23:03:12"></div> /* 2 minutes ago */
 ```
 
  - for example `day/month/year hour:minute:second` or `year-month-day hour:minute:second`
 
 ```html
-<div class="timestamp" date-time="11/18/2023 08:44:12 AM"></div> /* 2 minutes age */
+<div class="timestamp" date-time="11/18/2023 08:44:12 AM"></div> /* 2 minutes ago */
 <div class="timestamp" date-time="11/18/2023 08:44:12 PM"></div> /* منذ 12 ثانية */
 <div class="timestamp" date-time="2023-11-18 21:03:12 AM"></div> /* 2 کاتژمێر پێش ئێستا */
 <div class="timestamp" date-time="2023-11-18 21:03:12 PM"></div> /* Vor 3 Monate */
