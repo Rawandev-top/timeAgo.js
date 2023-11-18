@@ -1,3 +1,5 @@
+<img src="./timeAgo.js.png"/>
+
 # timeAgo.js
 timeAgo.js is a nano library (less than 2.22 KB) used to format datetime in 5 different languages. eg: '3 days ago'.
 
