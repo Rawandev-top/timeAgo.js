@@ -11,17 +11,17 @@ function TimeAgo() {
     const years = Math.floor(months / 12);
 
     if (years > 0) {
-      return 'منذ ' + years + ' سنة';
+      return `منذ ${years} سنة`;
     } else if (months > 0) {
-      return 'منذ ' + months + ' شهر';
+      return `منذ ${months} شهر`;
     } else if (days > 0) {
-      return 'منذ ' + days + ' يوم';
+      return `منذ ${days} يوم`;
     } else if (hours > 0) {
-      return 'منذ ' + hours + ' ساعة';
+      return `منذ ${hours} ساعة`;
     } else if (minutes > 0) {
-      return 'منذ ' + minutes + ' دقيقة';
+      return `منذ ${minutes} دقيقة`;
     } else if (seconds > 0) {
-      return 'منذ ' + seconds + ' ثانية';
+      return `منذ ${seconds} ثانية`;
     } else {
       return 'الآن';
     }
