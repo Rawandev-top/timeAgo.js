@@ -1,2 +1,2 @@
 # timeAgo.js
-timeAgo.js for Blogger Templates
+timeAgo.js script
