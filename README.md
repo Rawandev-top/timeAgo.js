@@ -1,5 +1,5 @@
 # timeAgo.js
-> **timeAgo.js** is a nano library (less than `999 Bytes`) used to format datetime in 5 different languages. eg: '2 hours ago'.
+> **timeAgo.js** is a nano library (less than `2.22 KB`) used to format datetime in 5 different languages. eg: '2 hours ago'.
 
 | Browser | Version | Support |
 |---------|---------|---------|
@@ -80,23 +80,33 @@ nuha
 ```
 
 - add `<script>` before `</body>`
+
 ```html
 <script>
   // Load TimeAgo.js
-  const timeago = new TimeAgo();
+  const timeago = new TimeAgo("en");
 
   // Update timestamps
-  document.querySelectorAll('.timestamp').forEach(element => {
-    const timestamp = new Date(element.getAttribute('date-time'));
+  document.querySelectorAll(".timestamp").forEach((element) => {
+    const timestamp = new Date(element.getAttribute("date-time"));
     element.innerText = timeago.format(timestamp);
   });
 </script>
 ```
 
+- chnage `TimeAgo("en")` to chnage the language
+
+- language codes:
+  -  `en` for English
+  -  `de` for German
+  -  `ar` for Arabic
+  -  `ckb` for Kurdish Sorani
+  -  `ku` for Kurdish Kurmaji
+
 # How to use?
 
 ```html
-<div class="timestamp" date-time="11/18/2023 08:44:12 AM"></div>
+<div class="timestamp" date-time="2023-11-18 23:03:12"></div>
 ```
 
  - for example `day/month/year hour:minute:second` or `year-month-day hour:minute:second`
