@@ -1,4 +1,63 @@
-function TimeAgo() {
+function TimeAgo(locale) {
+  const translations = {
+    second: {
+      ar: 'ثانية',
+      de: 'Sekunde',
+      en: 'second',
+      ku_sorani: 'چرک',
+      ku_kurmanji: 'çax',
+    },
+    minute: {
+      ar: 'دقيقة',
+      de: 'Minute',
+      en: 'minute',
+      ku_sorani: 'خولك',
+      ku_kurmanji: 'xulkek',
+    },
+    hour: {
+      ar: 'ساعة',
+      de: 'Stunde',
+      en: 'hour',
+      ku_sorani: 'كاتژمêr',
+      ku_kurmanji: 'katjî',
+    },
+    day: {
+      ar: 'يوم',
+      de: 'Tag',
+      en: 'day',
+      ku_sorani: 'ڕۆژ',
+      ku_kurmanji: 'roj',
+    },
+    month: {
+      ar: 'شهر',
+      de: 'Monat',
+      en: 'month',
+      ku_sorani: 'مانگ',
+      ku_kurmanji: 'meh',
+    },
+    year: {
+      ar: 'عام',
+      de: 'Jahr',
+      en: 'year',
+      ku_sorani: 'ساڵ',
+      ku_kurmanji: 'sal',
+    },
+    justNow: {
+      ar: 'الآن',
+      de: 'soeben',
+      en: 'just now',
+      ku_sorani: 'نیو',
+      ku_kurmanji: 'nû',
+    },
+    ago: {
+      ar: 'منذ',
+      de: 'vor',
+      en: 'ago',
+      ku_sorani: 'له پێش',
+      ku_kurmanji: 'ber',
+    },
+  };
+
   this.format = function (timestamp) {
     const now = new Date();
     const diff = now - timestamp;
@@ -11,19 +70,19 @@ function TimeAgo() {
     const years = Math.floor(months / 12);
 
     if (years > 0) {
-      return years + ' year' + (years > 1 ? 's' : '') + ' ago';
+      return years + ' ' + translations.year[locale] + ' ' + translations.ago[locale];
     } else if (months > 0) {
-      return months + ' month' + (months > 1 ? 's' : '') + ' ago';
+      return months + ' ' + translations.month[locale] + ' ' + translations.ago[locale];
     } else if (days > 0) {
-      return days + ' day' + (days > 1 ? 's' : '') + ' ago';
+      return days + ' ' + translations.day[locale] + ' ' + translations.ago[locale];
     } else if (hours > 0) {
-      return hours + ' hour' + (hours > 1 ? 's' : '') + ' ago';
+      return hours + ' ' + translations.hour[locale] + ' ' + translations.ago[locale];
     } else if (minutes > 0) {
-      return minutes + ' minute' + (minutes > 1 ? 's' : '') + ' ago';
+      return minutes + ' ' + translations.minute[locale] + ' ' + translations.ago[locale];
     } else if (seconds > 0) {
-      return seconds + ' second' + (seconds > 1 ? 's' : '') + ' ago';
+      return seconds + ' ' + translations.second[locale] + ' ' + translations.ago[locale];
     } else {
-      return 'just now';
+      return translations.justNow[locale];
     }
   };
 }
